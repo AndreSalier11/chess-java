@@ -124,8 +124,8 @@ public class ChessMatch {
         if(promoted == null) {
             throw new ChessException("There is no piece to be promoted");
         }
-        if(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals(type)) {
-            throw new ChessException("Invalid type for promotion");
+        if(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
+            return promoted;
         }
 
         Position pos = promoted.getChessPosition().toPosition();
